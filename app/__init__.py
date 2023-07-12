@@ -1,5 +1,6 @@
 from flask import Flask
-from os.path import abspath, dirname
+from os import getcwd
+from os.path import abspath, dirname, join
 
 
 # Diretórios da aplicação
@@ -8,23 +9,10 @@ TEMPLATE_FOLDER = f'{ROOT_FOLDER}/templates'
 STATIC_FOLDER = f'{ROOT_FOLDER}/static'
 UPLOAD_FOLDER = f'{ROOT_FOLDER}/uploads'
 OUTPUT_FOLDER = f'{ROOT_FOLDER}/output'
+DOWNLOAD_FOLDER = join(getcwd(), 'output')
 
-# Atributos das páginas do sistema
+# Título base do sistema
 TITLE = '| Baby Diet'
-PAGES = {
-    'index': {
-        'template': 'index.html',
-        'css': 'index.css',
-        'title': f'Início {TITLE}',
-        'scripts': ['form-events']
-    },
-    'labels': {
-        'template': 'labels.html',
-        'css': 'labels.css',
-        'title': f'Etiquetas {TITLE}',
-        'scripts': ['search-bar']
-    }
-}
 
 # Padrão de formatação do cabeçalho para a entrada de tabelas
 HEADER_PATTERN = [
@@ -42,6 +30,6 @@ HISTORY_PATH = f'{UPLOAD_FOLDER}/history.xlsx'
 
 
 app = Flask(__name__, template_folder=TEMPLATE_FOLDER, static_folder=STATIC_FOLDER)
-app.config.from_pyfile('config.py')
+app.secret_key = 'Dev.: David Santana <github.com/davidsantana06>'
 
 from app.views import *

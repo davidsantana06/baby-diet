@@ -91,8 +91,7 @@ def generate_labels(rows: list[list[str]], date: datetime, hour=15, min=0, hour_
                     volume_day -= volume_meal
                     # Incrementar o intervalo de horas
                     label_range += hour_range
-            # Se os campos não forem válidos, a etiqueta
-            # não é anexada à lista
+            # Se os campos não forem válidos, a etiqueta não é anexada
             except ValueError:
                 pass
 

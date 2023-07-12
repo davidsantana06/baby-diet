@@ -17,7 +17,8 @@ def flash_message_repository(name: str) -> tuple[str, str]:
         case 'invalid_spreadsheet':
             msg = '<strong>Planilha inválida!</strong> Por favor, verifique o padrão e preenchimento da tabela.'
             cat = 'danger'
-        case _:
-            msg = cat = ''
+        case 'process_spreadsheet':
+            msg = '<b>Sucesso!</b> As etiquetas foram geradas com base na planilha fornecida.'
+            cat = 'success'
 
     return (msg, cat)

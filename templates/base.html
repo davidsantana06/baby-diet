@@ -6,10 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
-    {% if page_css %}
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/' ~ page_css) }}">
-    {% endif %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/' ~ page_css) }}">
     <link rel="icon" href="{{ url_for('static', filename='img/bdl-icon.svg') }}">
     <title>{{ page_title }}</title>
     <style>
@@ -47,21 +45,18 @@
     {% endwith %}
 
     <main class="px-4 py-4 border-top border-success border-5 shadow">
-        {% block page_content %}
-        {% endblock %}
+        {% block page_content %}{% endblock %}
     </main>
 
     <footer class="pt-2 my-2 text-center">
         <span class="small-font-size text-body-secondary">
             <b>Baby Diet</b> por <a class="simple-link text-decoration-none" href="https://github.com/davidsantana06" target="_blank">David Santana.</a>
-            Aplicação em fase de desenvolvimento.
+            Aplicação experimental.
         </span>
     </footer>
 
     <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
-    {% for script in page_scripts %}
-        <script src="{{ url_for('static', filename='js/' ~ script ~ '.js') }}"></script>
-    {% endfor %}
+    <script src="{{ url_for('static', filename='js/' ~ page_script) }}"></script>
 </body>
 
 </html>
