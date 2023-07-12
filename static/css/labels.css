@@ -1,0 +1,21 @@
+.button-svg {
+    width: 15px;
+    height: 15px;
+    fill: currentColor;
+}
+
+#back-link {
+    display: inline-block;
+    text-decoration: none;
+    width: fit-content;
+}
+
+select {
+    max-width: fit-content;
+}
+
+table {
+    font-size: 11px;
+    border-radius: 5px;
+    overflow: hidden;
+}

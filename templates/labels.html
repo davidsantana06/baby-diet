@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+
+{% block page_content %}
+    <section class="normal-font-size">
+        <div class="pb-2">
+            <a class="simple-link" id="back-link" href="{{ url_for('index') }}">
+                <div class="d-flex align-items-center">
+                    <svg class="normal-svg me-1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z" />
+                    </svg>
+                    <span class="me-1">Voltar</span>
+                </div>
+            </a>
+        </div>
+        <p>
+            As etiquetas foram geradas com base na planilha fornecida. É importante ressaltar que, no caso de
+            <strong>haver campos não preenchidos na referida planilha</strong>, estes permaneceram inalterados
+            nas etiquetas correspondentes.
+        </p>
+        <p class="mb-2">É possível baixar a relação de etiquetas no formato desejado através dos botões abaixo.</p>
+        <div class="d-grid gap-2 d-md-block mb-4">
+            <a class="btn btn-outline-success btn-sm" href="{{ url_for('download_file', type='excel', id=id) }}" download>
+                <div class="d-flex align-items-center justify-content-center">
+                    <svg class="button-svg me-1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM5.884 4.68 8 7.219l2.116-2.54a.5.5 0 1 1 .768.641L8.651 8l2.233 2.68a.5.5 0 0 1-.768.64L8 8.781l-2.116 2.54a.5.5 0 0 1-.768-.641L7.349 8 5.116 5.32a.5.5 0 1 1 .768-.64z" />
+                    </svg>
+                    <span>Excel</span>
+                </div>
+            </a>
+            <a class="btn btn-outline-primary btn-sm" href="{{ url_for('download_file', type='word', id=id) }}" download>
+                <div class="d-flex align-items-center justify-content-center">
+                    <svg class="button-svg me-1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM5.485 4.879l1.036 4.144.997-3.655a.5.5 0 0 1 .964 0l.997 3.655 1.036-4.144a.5.5 0 0 1 .97.242l-1.5 6a.5.5 0 0 1-.967.01L8 7.402l-1.018 3.73a.5.5 0 0 1-.967-.01l-1.5-6a.5.5 0 1 1 .97-.242z" />
+                    </svg>
+                    <span>Word</span>
+                </div>
+            </a>
+        </div>
+        <div class="d-flex align-items-center">
+            <svg class="small-svg me-1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 0a1 1 0 0 0-1 1v1a1 1 0 0 0-1 1v4H1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h6v-2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5V16h6a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1h-3V3a1 1 0 0 0-1-1V1a1 1 0 0 0-1-1H6Zm2.5 5.034v1.1l.953-.55.5.867L9 7l.953.55-.5.866-.953-.55v1.1h-1v-1.1l-.953.55-.5-.866L7 7l-.953-.55.5-.866.953.55v-1.1h1ZM2.25 9h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5A.25.25 0 0 1 2 9.75v-.5A.25.25 0 0 1 2.25 9Zm0 2h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-.5a.25.25 0 0 1 .25-.25ZM2 13.25a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-.5ZM13.25 9h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-.5a.25.25 0 0 1 .25-.25ZM13 11.25a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-.5Zm.25 1.75h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-.5a.25.25 0 0 1 .25-.25Z" />
+            </svg>
+            <b id="hospital-name">Hospital Esaú Matos</b>
+        </div>
+    </section>
+
+    <div class="border-bottom mb-3 mt-2"></div>
+
+    <section>
+        <div class="input-group mb-4">
+            <input type="text" class="custom-form form-control form-control-sm shadow-none py-2" placeholder="Filtrar..." aria-label="Filtrar">
+            <select class="custom-form form-select form-select-sm shadow-none py-2" aria-label="Opções">
+                <option value="all" selected>Todos</option>
+                <option value="parent">{{ header[0] }}</option>
+                <option value="sector">{{ header[1] }}</option>
+                <option value="formula">{{ header[2] }}</option>
+            </select>
+            <button class="btn btn-success btn-sm" type="button" id="btn-search" aria-label="Pesquisar">
+                <div class="d-flex align-items-center px-1">
+                    <svg class="normal-svg" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                    </svg>
+                </div>
+            </button>
+        </div>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            {% for label in labels %}
+                <div class="col">
+                    <div class="card rounded">
+                        <table class="table table-striped table-borderless align-middle mb-0">
+                            <tbody>
+                                <tr class="rounded">
+                                    <th class="ps-3 py-2" scope="row">{{ header[0] }}</th>
+                                    <td class="text-end pe-3 py-2"><span class="parent-name">{{ label[0] }}</span></td>
+                                </tr>
+                                <tr>
+                                    <th class="ps-3 py-2" scope="row">{{ header[1] }}</th>
+                                    <td class="text-end pe-3 py-2"><span class="sector-name">{{ label[1] }}</span></td>
+                                </tr>
+                                <tr>
+                                    <th class="ps-3 py-2" scope="row">{{ header[2] }}</th>
+                                    <td class="text-end pe-3 py-2"><span class="formula-name">{{ label[2] }}</span></td>
+                                </tr>
+                                <tr>
+                                    <th class="ps-3 py-2" scope="row">{{ header[3] }}</th>
+                                    <td class="text-end pe-3 py-2">{{ label[3] }}</td>
+                                </tr>
+                                <tr>
+                                    <th class="ps-3 py-2" scope="row">{{ header[4] }}</th>
+                                    <td class="text-end pe-3 py-2">{{ label[4] }}</td>
+                                </tr>
+                                <tr>
+                                    <th class="ps-3 py-2" scope="row">{{ header[5] }}</th>
+                                    <td class="text-end pe-3 py-2">{{ label[5] }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+{% endblock %}

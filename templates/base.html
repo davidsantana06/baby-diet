@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+    {% if page_css %}
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/' ~ page_css) }}">
+    {% endif %}
+    <link rel="icon" href="{{ url_for('static', filename='img/bdl-icon.svg') }}">
+    <title>{{ page_title }}</title>
+    <style>
+        @font-face {
+            font-family: "Poppins";
+            src: url("{{ url_for('static', filename='font/poppins.ttf') }}}") format("ttf");
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+        }
+  </style>
+</head>
+
+<body class="container py-4">
+    <header class="pb-2 mb-2">
+        <div class="d-flex align-items-center text-body-emphasis text-decoration-none">
+            <a href="{{ url_for('index') }}">
+                <img class="me-2" id="logo-img" src="{{ url_for('static', filename='img/bdl-logo.svg') }}">
+            </a>
+            <span class="text-success" id="logo-title">
+                <b>B</b>aby<b>D</b>iet
+            </span>
+        </div>
+    </header>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="alert {{ 'alert-' ~ category }} text-center rounded-0 px-4" role="alert">
+                    <span class="normal-font-size">{{ message | safe }}</span>
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+    <main class="px-4 py-4 border-top border-success border-5 shadow">
+        {% block page_content %}
+        {% endblock %}
+    </main>
+
+    <footer class="pt-2 my-2 text-center">
+        <span class="small-font-size text-body-secondary">
+            <b>Baby Diet</b> por <a class="simple-link text-decoration-none" href="https://github.com/davidsantana06" target="_blank">David Santana.</a>
+            Aplicação em fase de desenvolvimento.
+        </span>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+    {% for script in page_scripts %}
+        <script src="{{ url_for('static', filename='js/' ~ script ~ '.js') }}"></script>
+    {% endfor %}
+</body>
+
+</html>

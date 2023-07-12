@@ -1,0 +1,62 @@
+p {
+    text-align: justify;
+}
+
+.simple-link {
+    color: #198754;
+}
+
+.simple-link:hover {
+    color: #157246;
+}
+
+.simple-link:active {
+    color: #146C43;
+}
+
+.small-font-size {
+    font-size: 11px;
+}
+
+.normal-font-size {
+    font-size: 14px;
+}
+
+.normal-svg {
+    width: 14px;
+    height: 14px;
+    fill: currentColor;
+}
+
+.small-svg {
+    width: 11px;
+    height: 11px;
+    fill: currentColor;
+}
+
+#hospital-name {
+    font-size: 12px;
+}
+
+.custom-form {
+    font-size: 14px;
+}
+
+.custom-form:focus {
+    border-color: #198754;
+}
+
+#logo-img {
+    width: 30px;
+    height: 30px;
+    height: 50;
+    transition: transform 0.3s;
+}
+
+#logo-img:hover {
+    transform: scale(1.2) rotate(-5deg);
+}
+
+#logo-title {
+    font-size: 25px;
+}

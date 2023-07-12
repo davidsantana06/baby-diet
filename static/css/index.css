@@ -1,0 +1,16 @@
+#instruction-form {
+    display: inline-block;
+}
+
+#date {
+    width: fit-content;
+}
+
+.btn label {
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+input[type="file"] {
+    display: none;
+}
