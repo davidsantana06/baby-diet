@@ -35,6 +35,7 @@ p {
 }
 
 #hospital-name {
+    font-weight: bold;
     font-size: 12px;
 }
 
