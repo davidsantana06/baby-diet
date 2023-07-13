@@ -29,8 +29,7 @@ function searchBy() {
 
             if (name.includes(inputValue)) {
                 cols[i].style.display = '';
-            }
-            else {
+            } else {
                 cols[i].style.display = 'none';
             }
         }
