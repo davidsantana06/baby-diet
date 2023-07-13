@@ -25,14 +25,14 @@
         </div>
         {{ hospital_name() }}
     </section>
-
+    
     <div class="border-bottom mb-3 mt-2"></div>
 
     <section>
-        <div class="input-group mb-4">
+        <div class="input-group mb-3">
             <input type="text" class="custom-form form-control form-control-sm shadow-none py-2" placeholder="Filtrar..." aria-label="Filtrar">
             <select class="custom-form form-select form-select-sm shadow-none py-2" aria-label="Opções">
-                <option value="all" selected>Todos</option>
+                <option value="all">Todos</option>
                 <option value="parent">{{ header[0] }}</option>
                 <option value="sector">{{ header[1] }}</option>
                 <option value="formula">{{ header[2] }}</option>
@@ -47,6 +47,7 @@
         </div>
         <div class="row row-cols-1 row-cols-md-3 g-4">
             {% set classes = ['parent-name', 'sector-name', 'formula-name', None, None] %}
+            {% set labels = labels | default(['RN de', 'Setor do RN', 'Fórmula', 'Volume', 'Horario', 'Data']) %}
             {% for label in labels %}
                 <div class="col">
                     <div class="card rounded">
@@ -54,7 +55,6 @@
                             <tbody>
                                 {% for class in classes %}
                                     {% set i = loop.index - 1 %}
-
                                     {{ table_row(header[i], label[i], class) }}
                                 {% endfor %}
                             </tbody>

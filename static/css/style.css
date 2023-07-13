@@ -22,21 +22,18 @@ p {
     font-size: 14px;
 }
 
+svg {
+    fill: currentColor;
+}
+
 .normal-svg {
     width: 14px;
     height: 14px;
-    fill: currentColor;
 }
 
 .small-svg {
-    width: 11px;
-    height: 11px;
-    fill: currentColor;
-}
-
-#hospital-name {
-    font-weight: bold;
-    font-size: 12px;
+    width: 12px;
+    height: 12px;
 }
 
 .custom-form {
@@ -60,4 +57,9 @@ p {
 
 #logo-title {
     font-size: 25px;
+}
+
+#hospital-name {
+    font-weight: bold;
+    font-size: 12px;
 }

@@ -34,32 +34,29 @@
     </section>
 
     <div class="border-bottom mt-2"></div>
+    
+    <section class="normal-font-size">
+        <form action="{{ url_for('process_spreadsheet') }}" enctype="multipart/form-data" method="POST">
+            <div class="my-4">
+                <strong>Personalizar data</strong>
+                <p class="mb-2">
+                    Para personalizar a data referente à geração das etiquetas, altere o campo abaixo. Do contrário,
+                    a data corrente será usada como base.
+                </p>
+                <input type="date" class="custom-form form-control form-control-sm shadow-none" id="date" name="date" value="{{ dt_now }}">
+            </div>
 
-    <section>
-        <div class="normal-font-size">
-            <form action="{{ url_for('process_spreadsheet') }}" enctype="multipart/form-data" method="POST">
-                <div class="my-4">
-                    <strong>Personalizar data</strong>
-                    <p class="mb-2">
-                        Para personalizar a data referente à geração das etiquetas, altere o campo abaixo. Do contrário,
-                        a data corrente será usada como base.
-                    </p>
-                    <input type="date" class="custom-form form-control form-control-sm shadow-none" id="date" name="date" value="{{ dt_now }}">
+            <div class="border-bottom"></div>
+
+            <div class="text-center my-3 py-5">
+                <div class="px-4 mb-3">
+                    <span id="instruction-form">Selecione a planilha com as informações do(s) bebê(s).</span>
                 </div>
-
-                <div class="border-bottom"></div>
-
-                <div class="text-center my-3 py-5">
-                    <div class="px-4 mb-3">
-                        <span id="instruction-form">Selecione a planilha com as informações do(s) bebê(s).</span>
-                    </div>
-                    <button class="btn btn-success btn-sm" type="button">
-                        <label class="px-4 py-1" for="input-file">Selecionar arquivo</label>
-                        <input id="input-file" name="spreadsheet" accept=".xlsx" type="file">
-                    </button>
-                </div>
-            </form>
-        </div>
+                <button class="btn btn-success btn-sm p-0" type="button">
+                    <label class="px-4 py-2" for="input-file">Selecionar arquivo</label>
+                    <input id="input-file" name="spreadsheet" accept=".xlsx" type="file">
+                </button>
+            </div>
+        </form>
     </section>
-
 {% endblock %}
