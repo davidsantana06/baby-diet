@@ -10,16 +10,6 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/' ~ page_css) }}">
     <link rel="icon" href="{{ url_for('static', filename='img/bdl-icon.svg') }}">
     <title>{{ page_title }}</title>
-    <style>
-        @font-face {
-            font-family: "Poppins";
-            src: url("{{ url_for('static', filename='font/poppins.ttf') }}}") format("ttf");
-        }
-
-        body {
-            font-family: "Poppins", sans-serif;
-        }
-  </style>
 </head>
 
 <body class="container py-4">
