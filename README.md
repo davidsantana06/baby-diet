@@ -24,16 +24,17 @@
 
 ### 2. Linguagens e tecnologias utilizadas
 <div align="justify">
-  Para o desenvolvimento da aplicação, foram utilizadas as tecnologias <strong>Flask</strong>, <strong>Pandas</strong> e <strong>Openpyxl</strong>. A integração dessas
-  bibliotecas possibilitou a criação de uma aplicação web simples que permite a leitura, gerenciamento e escrita de dados nos formatos de texto e Excel.
+  A estrutura de backend foi desenvolvida em Python com o framework web Flask, utilizando as bibliotecas Pandas e Openpyxl para leitura, tratamento e armazenamento de 
+  dados. No lado do frontend, foi utilizado o conjunto HTML, CSS e Bootstrap para construir a interface, complementados pelo uso de funções JavaScript para tratamentos
+  específicos.
 </div>
 <br><br>
 
 
 ### 3. Como rodar a aplicação
 <div align="justify">
-  Para executar a aplicação, basta baixar o repositório e abrir o terminal na pasta raiz. Realize o comando disposto abaixo para a instalação de todas as bibliotecas
-  necessárias.
+  Para inicializar a aplicação, é necessário ter o Python instalado juntamente com o conjunto de bibliotecas mencionado anteriormente. Para isso, abra o terminal na pasta
+  raiz do projeto e execute o comando disposto abaixo.
 </div>
 <br>
 
@@ -42,7 +43,7 @@ pip3 install -r requirements.txt
 ```
 
 <div align="justify">
-  Logo após, execute o arquivo "run.py" para iniciar o servidor. A aplicação estará acessível através do localhost na porta 5000 (localhost:5000).
+  Em seguida, execute o arquivo "run.py". Após a execução, você poderá acessar todos os recursos da aplicação através do endereço "localhost" na porta 5000 (127.0.0.1:5000).
 </div>
 <br><br>
 
