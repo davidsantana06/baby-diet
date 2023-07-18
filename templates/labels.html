@@ -1,6 +1,10 @@
 {% from 'components.html' import download_btn, hospital_name, table_row %}
 {% extends "base.html" %}
 
+{% set css_files = ['labels'] %}
+{% set script_files = ['search-bar'] %}
+{% set page_title = 'Etiquetas' %}
+
 {% block page_content %}
     <section class="normal-font-size">
         <div class="pb-2">

@@ -11,9 +11,6 @@ UPLOAD_FOLDER = f'{ROOT_FOLDER}/uploads'
 OUTPUT_FOLDER = f'{ROOT_FOLDER}/output'
 DOWNLOAD_FOLDER = join(getcwd(), 'output')
 
-# Título base do sistema
-TITLE = '| Baby Diet'
-
 # Padrão de formatação do cabeçalho para a entrada de tabelas
 HEADER_PATTERN = [
     'Setor/Leito', 'RN de', 'Registro', 'Diagnóstico', 'Dieta', 'Volume (ml)',

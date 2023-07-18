@@ -1,6 +1,6 @@
 from app import (
     app,
-    DOWNLOAD_FOLDER, HEADER_PATTERN, HISTORY_PATH, LABEL_HEADER, OUTPUT_FOLDER, TITLE, UPLOAD_FOLDER
+    DOWNLOAD_FOLDER, HEADER_PATTERN, HISTORY_PATH, LABEL_HEADER, OUTPUT_FOLDER, UPLOAD_FOLDER
 )
 from app.functions.utils import flash_message_repository as msg_repo
 from app.functions.data_handling import data_from_excel, generate_labels, write_excel, write_word
@@ -22,9 +22,6 @@ def index():
     
     response = render_template(
         template_name_or_list='index.html',
-        page_css='index.css',
-        page_title=f'Início {TITLE}',
-        page_script='form-events.js',
         dt_now=datetime.now().date()
     )
 
@@ -107,9 +104,6 @@ def show_labels(id: int):
         
         response = render_template(
             template_name_or_list='labels.html',
-            page_css='labels.css',
-            page_title=f'Etiquetas {TITLE}',
-            page_script='search-bar.js',
             id=id,
             header=LABEL_HEADER,
             labels=labels

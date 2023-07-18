@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 
+{% set css_files = ['bootstrap.min', 'style'] + css_files %}
+{% set script_files = ['bootstrap.bundle.min'] + script_files %}
+{% set page_title = page_title ~ ' | Baby Diet' %}
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/' ~ page_css) }}">
+    {% for css in css_files %}
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/' ~ css ~ '.css') }}">
+    {% endfor %}
     <link rel="icon" href="{{ url_for('static', filename='img/bdl-icon.svg') }}">
     <title>{{ page_title }}</title>
 </head>
@@ -27,8 +31,9 @@
     {% with messages = get_flashed_messages(with_categories=true) %}
         {% if messages %}
             {% for category, message in messages %}
-                <div class="alert {{ 'alert-' ~ category }} alert-dismissible fade show border-0 border-start border-3 {{ 'border-' ~ category }} rounded-0 px-4" role="alert">
+                <div class="alert {{ 'alert-' ~ category }} alert-dismissible fade show rounded-0 ps-4" role="alert">
                     <span class="normal-font-size">{{ message | safe }}</span>
+                    <button class="btn-close shadow-none" type="button" data-bs-dismiss="alert" aria-label="Fechar"></button>
                 </div>
             {% endfor %}
         {% endif %}
@@ -45,8 +50,9 @@
         </span>
     </footer>
 
-    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/' ~ page_script) }}"></script>
+    {% for script in script_files %}
+        <script src="{{ url_for('static', filename='js/' ~ script ~ '.js') }}"></script>
+    {% endfor %}
 </body>
 
 </html>
