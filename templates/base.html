@@ -1,3 +1,5 @@
+{% from 'components.html' import alert %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,16 +30,7 @@
         </div>
     </header>
 
-    {% with messages = get_flashed_messages(with_categories=true) %}
-        {% if messages %}
-            {% for category, message in messages %}
-                <div class="alert {{ 'alert-' ~ category }} alert-dismissible fade show rounded-0 ps-4" role="alert">
-                    <span class="normal-font-size">{{ message | safe }}</span>
-                    <button class="btn-close shadow-none" type="button" data-bs-dismiss="alert" aria-label="Fechar"></button>
-                </div>
-            {% endfor %}
-        {% endif %}
-    {% endwith %}
+    {{ alert() }}
 
     <main class="px-4 py-4 border-top border-success border-5 shadow">
         {% block page_content %}{% endblock %}
