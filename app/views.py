@@ -17,9 +17,6 @@ def page_not_found(error):
 
 @app.route('/')
 def index():
-    msg, cat = msg_repo('process_spreadsheet')
-    flash(msg, cat)
-    
     response = render_template(
         template_name_or_list='index.html',
         dt_now=datetime.now().date()
