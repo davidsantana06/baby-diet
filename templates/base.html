@@ -18,7 +18,7 @@
     <title>{{ page_title }}</title>
 </head>
 
-<body class="container py-4">
+<body class="container bg-body-secondary py-4">
     <header class="pb-2 mb-2">
         <div class="d-flex align-items-center text-body-emphasis text-decoration-none">
             <a href="{{ url_for('index') }}">
@@ -32,7 +32,7 @@
 
     {{ alert() }}
 
-    <main class="px-4 py-4 border-top border-success border-5 shadow">
+    <main class="px-4 py-4 border-top border-success border-5 bg-white shadow">
         {% block page_content %}{% endblock %}
     </main>
     
