@@ -78,7 +78,7 @@ Após submeter a planilha e esta for valida, você será redirecionado para a te
 texto ou Excel.
 
 <div style="text-align:center">
-  <img src="./images/labels.png" alt="Etiquetas" style="width: 100%;">
+  <img src="./images/show-labels.png" alt="Etiquetas" style="width: 100%;">
 </div>
 
 <div align="center"><b>Imagem 2. Etiquetas</b></div>
