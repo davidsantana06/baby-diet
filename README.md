@@ -39,9 +39,11 @@ A documentação da aplicação pode ser acessada através do <a href="https://d
 
 ## :computer: Pré-requisitos
 
+### Tecnologias utilizadas
 A estrutura backend foi desenvolvida em Python com o framework web Flask, utilizando as bibliotecas Pandas e Openpyxl para leitura, tratamento e armazenamento de dados. No lado do frontend, foram utilizados HTML, CSS e Bootstrap para construir a interface, complementados pelo uso de funções JavaScript para tratamentos específicos.
-<br />
+<br /><br />
 
+### Instalação
 Para executar a aplicação em sua máquina, baixe ou clone este repositório. Em seguida, abra o terminal na pasta raiz do projeto e execute o seguinte comando:
 
 ```terminal
@@ -65,7 +67,7 @@ Submeta a planilha na tela de início.
 <div align="center"><b>IMAGEM 1. INÍCIO</b></div>
 <br />
 
-Você será direcionado para a tela de etiquetas, onde poderá visualizar, filtrar e baixar cada etiqueta como um arquivo de texto ou Excel.
+Você será direcionado para a tela de etiquetas, onde poderá visualizar, filtrar e baixar as etiquetas como um arquivo de texto ou Excel.
 
 <div style="text-align:center">
   <img src="./images/show-labels.png" alt="Etiquetas" style="width: 100%;">
@@ -76,4 +78,4 @@ Você será direcionado para a tela de etiquetas, onde poderá visualizar, filtr
 
 
 ## :balance_scale: Licença
-Este projeto adota a Licença MIT, concedendo a você a flexibilidade essencial para incorporar, adaptar e distribuir a biblioteca de acordo com suas necessidades específicas.
+Este projeto adota a **Licença MIT**, o que permite que você utilize e faça modificações na aplicação conforme sua vontade. A única coisa que peço é que os créditos sejam dados, reconhecendo o esforço e tempo que investi na construção dela.
