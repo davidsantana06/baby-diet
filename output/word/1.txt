@@ -2,142 +2,142 @@ RN de: Geralt de Rivia
 Setor do RN: UTI
 Fórmula: LHP
 Volume: 60 ml  Horario: 15:00
-Data: 28/08/2023
+Data: 09/12/2023
 
 RN de: Geralt de Rivia
 Setor do RN: UTI
 Fórmula: LHP
 Volume: 60 ml  Horario: 18:00
-Data: 28/08/2023
+Data: 09/12/2023
 
 RN de: Geralt de Rivia
 Setor do RN: UTI
 Fórmula: LHP
 Volume: 60 ml  Horario: 21:00
-Data: 28/08/2023
+Data: 09/12/2023
 
 RN de: Geralt de Rivia
 Setor do RN: UTI
 Fórmula: LHP
 Volume: 60 ml  Horario: 00:00
-Data: 29/08/2023
+Data: 10/12/2023
 
 RN de: Geralt de Rivia
 Setor do RN: UTI
 Fórmula: LHP
 Volume: 60 ml  Horario: 03:00
-Data: 29/08/2023
+Data: 10/12/2023
 
 RN de: Geralt de Rivia
 Setor do RN: UTI
 Fórmula: LHP
 Volume: 60 ml  Horario: 06:00
-Data: 29/08/2023
+Data: 10/12/2023
 
 RN de: Geralt de Rivia
 Setor do RN: UTI
 Fórmula: LHP
 Volume: 60 ml  Horario: 09:00
-Data: 29/08/2023
+Data: 10/12/2023
 
 RN de: Geralt de Rivia
 Setor do RN: UTI
 Fórmula: LHP
 Volume: 60 ml  Horario: 12:00
-Data: 29/08/2023
+Data: 10/12/2023
 
 RN de: Kratos da Silva
 Setor do RN: UCIN
 Fórmula: LHP + Malto
 Volume: 50 ml  Horario: 15:00
-Data: 28/08/2023
+Data: 09/12/2023
 
 RN de: Kratos da Silva
 Setor do RN: UCIN
 Fórmula: LHP + Malto
 Volume: 50 ml  Horario: 18:00
-Data: 28/08/2023
+Data: 09/12/2023
 
 RN de: Kratos da Silva
 Setor do RN: UCIN
 Fórmula: LHP + Malto
 Volume: 50 ml  Horario: 21:00
-Data: 28/08/2023
+Data: 09/12/2023
 
 RN de: Kratos da Silva
 Setor do RN: UCIN
 Fórmula: LHP + Malto
 Volume: 50 ml  Horario: 00:00
-Data: 29/08/2023
+Data: 10/12/2023
 
 RN de: Kratos da Silva
 Setor do RN: UCIN
 Fórmula: LHP + Malto
 Volume: 50 ml  Horario: 03:00
-Data: 29/08/2023
+Data: 10/12/2023
 
 RN de: Kratos da Silva
 Setor do RN: UCIN
 Fórmula: LHP + Malto
 Volume: 50 ml  Horario: 06:00
-Data: 29/08/2023
+Data: 10/12/2023
 
 RN de: Kratos da Silva
 Setor do RN: UCIN
 Fórmula: LHP + Malto
 Volume: 50 ml  Horario: 09:00
-Data: 29/08/2023
+Data: 10/12/2023
 
 RN de: Kratos da Silva
 Setor do RN: UCIN
 Fórmula: LHP + Malto
 Volume: 50 ml  Horario: 12:00
-Data: 29/08/2023
+Data: 10/12/2023
 
 RN de: Leon S. Kennedy
 Setor do RN: UTI
 Fórmula: LHP
 Volume: 100 ml  Horario: 15:00
-Data: 28/08/2023
+Data: 09/12/2023
 
 RN de: Leon S. Kennedy
 Setor do RN: UTI
 Fórmula: LHP
 Volume: 100 ml  Horario: 18:00
-Data: 28/08/2023
+Data: 09/12/2023
 
 RN de: Leon S. Kennedy
 Setor do RN: UTI
 Fórmula: LHP
 Volume: 100 ml  Horario: 21:00
-Data: 28/08/2023
+Data: 09/12/2023
 
 RN de: Leon S. Kennedy
 Setor do RN: UTI
 Fórmula: LHP
 Volume: 100 ml  Horario: 00:00
-Data: 29/08/2023
+Data: 10/12/2023
 
 RN de: Leon S. Kennedy
 Setor do RN: UTI
 Fórmula: LHP
 Volume: 100 ml  Horario: 03:00
-Data: 29/08/2023
+Data: 10/12/2023
 
 RN de: Leon S. Kennedy
 Setor do RN: UTI
 Fórmula: LHP
 Volume: 100 ml  Horario: 06:00
-Data: 29/08/2023
+Data: 10/12/2023
 
 RN de: Leon S. Kennedy
 Setor do RN: UTI
 Fórmula: LHP
 Volume: 100 ml  Horario: 09:00
-Data: 29/08/2023
+Data: 10/12/2023
 
 RN de: Leon S. Kennedy
 Setor do RN: UTI
 Fórmula: LHP
 Volume: 100 ml  Horario: 12:00
-Data: 29/08/2023
+Data: 10/12/2023

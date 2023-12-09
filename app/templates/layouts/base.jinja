@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ url_for('static', filename='img/bdl-icon.svg') }}">
+    <link rel="stylesheet" href="{{ css('bootstrap.min') }}">
+    <link rel="stylesheet" href="{{ css('style') }}">
+    {% block stylesheet %}{% endblock %}
+    <title>{% block title %}{% endblock %} | Baby Diet</title>
+</head>
+
+<body class="container bg-body-secondary py-4">
+    <header class="pb-2 mb-2">
+        <div class="d-flex align-items-center text-body-emphasis text-decoration-none">
+            <a href="{{ url_for('index') }}">
+                <img class="me-2" id="logo-img" src="{{ img('bdl-logo.svg') }}">
+            </a>
+            <span class="text-success" id="logo-title">
+                <b>B</b>aby<b>D</b>iet
+            </span>
+        </div>
+    </header>
+    {% include inc('alert') %}
+    <main class="px-4 py-4 border-top border-success border-5 bg-white shadow">
+        {% block content %}{% endblock %}
+    </main>
+    {% include inc('footer') %}
+    <script src="{{ js('bootstrap.bundle.min') }}"></script>
+    {% block script %}{% endblock %}
+</body>
+
+</html>

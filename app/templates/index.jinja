@@ -1,11 +1,12 @@
-{% from 'components.html' import hospital_name %}
-{% extends "base.html" %}
+{% extends layout('base') %}
 
-{% set css_files = ['index'] %}
-{% set script_files = ['form-events'] %}
-{% set page_title = 'Início' %}
+{% block title %}Início{% endblock %}
 
-{% block page_content %}
+{% block stylesheet %}
+    <link rel="stylesheet" href="{{ css('index') }}">
+{% endblock %}
+
+{% block content %}
     <section class="normal-font-size">
         <div class="mb-4">
             <p>Para a geração de etiquetas, é importante observar e garantir os seguintes pontos:</p>
@@ -34,7 +35,7 @@
                 </p>
             </div>
         </div>
-        {{ hospital_name() }}
+        {% include inc('hospital-name') %}
     </section>
 
     <div class="border-bottom mt-2"></div>
@@ -63,4 +64,8 @@
             </div>
         </form>
     </section>
+{% endblock %}
+
+{% block script %}
+    <script src="{{ js('form-events') }}"></script>
 {% endblock %}

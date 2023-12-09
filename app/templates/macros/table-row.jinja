@@ -1,0 +1,6 @@
+{% macro table_row(header, label, span_class) %}
+    <tr>
+        <th class="ps-3 py-2" scope="row">{{ header }}</th>
+        <td class="text-end pe-3 py-2"><span {% if span_class %} class={{ span_class }} {% endif %}>{{ label }}</span></td>
+    </tr>
+{% endmacro %}

@@ -21,6 +21,19 @@ def data_from_excel(path: str) -> tuple[DataFrame, list[str], list[list[str]]]:
     return (dataframe, header, rows)
 
 
+def _validate_field(field: str) -> bool:
+    '''
+    Valida um campo extraído da planilha.
+
+    Parâmetros:
+        field (str): Campo a ser validado.
+
+    Retorno:
+        bool: Indicador booleano para a validade do campo.
+    '''
+    return (field and field != 'nan' and field != '*')
+
+
 def generate_labels(rows: list[list[str]], date: datetime, hour=15, min=0, hour_range=3) -> list[list[str]]:
     '''
     Organiza toda a relação de dados proveniente de uma planilha e compõe as etiquetas
@@ -57,7 +70,7 @@ def generate_labels(rows: list[list[str]], date: datetime, hour=15, min=0, hour_
         formula = str(row[9])
 
         # Caso a fórmula seja inválida...
-        if not validate_field(formula):
+        if not _validate_field(formula):
             # Considerar a dieta como fórmula
             formula = str(row[4])
 
@@ -65,7 +78,7 @@ def generate_labels(rows: list[list[str]], date: datetime, hour=15, min=0, hour_
         label = [parent, sector, formula]
 
         # Se os campos forem válidos...
-        if all(validate_field(field) for field in label):
+        if all(_validate_field(field) for field in label):
             # Bloco try/except para verificar os campos de
             # volume por refeição e diário são válidos
             try:
@@ -97,19 +110,6 @@ def generate_labels(rows: list[list[str]], date: datetime, hour=15, min=0, hour_
 
     # Retornar as etiquetas
     return labels
-
-
-def validate_field(field: str) -> bool:
-    '''
-    Valida um campo extraído da planilha.
-
-    Parâmetros:
-        field (str): Campo a ser validado.
-
-    Retorno:
-        bool: Indicador booleano para a validade do campo.
-    '''
-    return (field and field != 'nan' and field != '*')
 
 
 def write_excel(path: str, dataframe: DataFrame = None, header: list[str] = None, rows: list[list[str]] = None):
