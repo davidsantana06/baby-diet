@@ -15,6 +15,11 @@ from .lib.core import (
 from .lib.utils import get_message
 
 
+@app.errorhandler(404)
+def page_not_found(_):
+    return redirect(url_for('index'))
+
+
 @app.route('/')
 def index():
     return render_template('index')
