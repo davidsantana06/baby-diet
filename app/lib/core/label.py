@@ -1,8 +1,9 @@
 from datetime import datetime, time, timedelta
 from pandas import DataFrame, read_excel
+from typing import List, Tuple
 
 
-def data_from_excel(path: str) -> tuple[DataFrame, list[str], list[list[str]]]:
+def data_from_excel(path: str) -> Tuple[DataFrame, List[str], List[List[str]]]:
     '''
     Extrai os dados armazenados em uma planilha Excel, compondo um DataFrame com
     a relação integral de dados e separando a relação em cabeçalho e linhas.
@@ -11,8 +12,8 @@ def data_from_excel(path: str) -> tuple[DataFrame, list[str], list[list[str]]]:
         path (str): Caminho completo para o carregamento do arquivo.
 
     Retorno:
-        Uma tupla contendo o dataframe (DataFrame), o cabeçalho (list[str]) e as
-        linhas (list[list[str]]]), extraídos da planilha.
+        Uma tupla contendo o dataframe (DataFrame), o cabeçalho (List[str]) e as
+        linhas (List[List[str]]]), extraídos da planilha.
     '''
     dataframe = read_excel(path)
     header = dataframe.columns.values.tolist()
@@ -34,13 +35,13 @@ def _validate_field(field: str) -> bool:
     return (field and field != 'nan' and field != '*')
 
 
-def generate_labels(rows: list[list[str]], date: datetime, hour=15, min=0, hour_range=3) -> list[list[str]]:
+def generate_labels(rows: List[List[str]], date: datetime, hour=15, min=0, hour_range=3) -> List[List[str]]:
     '''
     Organiza toda a relação de dados proveniente de uma planilha e compõe as etiquetas
     contendo as dietas de cada um dos bebês presente na relação.
 
     Parâmetros:
-        - rows (list[list[str]]): As linhas presentes no arquivo, na forma de lista.
+        - rows (List[List[str]]): As linhas presentes no arquivo, na forma de lista.
         - date (datetime, opcional): Tempo inicial para a contabilização das etiquetas.
         - hour (int, opcional): Valor em horas para a geração da primeira etiqueta e 
         composição das demais.
@@ -50,7 +51,7 @@ def generate_labels(rows: list[list[str]], date: datetime, hour=15, min=0, hour_
         horário em cada etiqueta.
 
     Retorno:
-        list[list[str]]: A relação de todas as etiquetas geradas, no formato de lista.
+        List[List[str]]: A relação de todas as etiquetas geradas, no formato de lista.
     '''
 
     # Combinar a data informada com o tempo de início
@@ -112,15 +113,15 @@ def generate_labels(rows: list[list[str]], date: datetime, hour=15, min=0, hour_
     return labels
 
 
-def write_excel(path: str, dataframe: DataFrame = None, header: list[str] = None, rows: list[list[str]] = None):
+def write_excel(path: str, dataframe: DataFrame = None, header: List[str] = None, rows: List[List[str]] = None):
     '''
     Escreve um arquivo Excel com base nos dados informados como parâmetro.
 
     Parâmetros:
         - path (str): Caminho completo para o salvamento do arquivo.
         - dataframe (DataFrame, opcional): Objeto DataFrame com a relação de dados já pronta.
-        - header (list[str], opcional): O cabeçalho da planilha, no formato de lista.
-        - rows (list[list[str]], opcional): As linhas da planilha, no formato de lista.
+        - header (List[str], opcional): O cabeçalho da planilha, no formato de lista.
+        - rows (List[List[str]], opcional): As linhas da planilha, no formato de lista.
     '''
     if bool(dataframe is None):
         dataframe = DataFrame(rows, columns=header)
@@ -128,14 +129,14 @@ def write_excel(path: str, dataframe: DataFrame = None, header: list[str] = None
     dataframe.to_excel(path, index=False)
 
 
-def write_word(path: str, header: list[str], rows: list[list[str]]):
+def write_word(path: str, header: List[str], rows: List[List[str]]):
     '''
     Escreve um arquivo de texto com base nos dados informados como parâmetro.
 
     Parâmetros:
         - path (str): Caminho completo para o salvamento do arquivo.
-        - header (list[str], opcional): O cabeçalho para as entradas, no formato de lista.
-        - rows (list[list[str]], opcional): As entradas do arquivo, no formato de lista.
+        - header (List[str], opcional): O cabeçalho para as entradas, no formato de lista.
+        - rows (List[List[str]], opcional): As entradas do arquivo, no formato de lista.
     '''
     with open(path, 'w', encoding='UTF-8') as file:
         # Inicializar a variável para armazenamento do texto

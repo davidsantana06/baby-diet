@@ -1,3 +1,6 @@
+from typing import Tuple
+
+
 _MESSAGE_REPOSITORY = {
     'invalid_extension': ('<strong>Extensão inválida!</strong> Por favor, selecione um arquivo .xlsx válido.', 'danger'),
     'invalid_spreadsheet': ('<strong>Planilha inválida!</strong> Por favor, verifique o padrão e preenchimento da tabela.', 'danger'),
@@ -5,7 +8,7 @@ _MESSAGE_REPOSITORY = {
 }
 
 
-def get_message(name: str) -> tuple[str, str]:
+def get_message(name: str) -> Tuple[str, str]:
     '''
     Representa um repositório fixo de mensagens que podem ser encaminhados
     para o front-end. A mensagem é resgatada a partir do seu nome, informado
