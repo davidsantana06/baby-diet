@@ -1,0 +1,8 @@
+[build]
+command = "pip install -r requirements.txt"
+
+[deploy]
+command = "gunicorn run:app"
+
+[start]
+command = "flask run"

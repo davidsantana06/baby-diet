@@ -4,6 +4,8 @@ from .lib.core import (
     css, img, js
 )
 
+
+
 app = Flask(__name__)
 app.jinja_env.globals.update({
     'inc': include, 'layout': layout, 'macro': macro,
