@@ -34,12 +34,15 @@
                     esteja salva nesse formato para garantir uma leitura adequada e sem problemas.
                 </p>
             </div>
+            <div class="mb-3">
+                <p>
+                    Você pode realizar o download da planilha exemplo através do <a class="simple-link fw-semibold text-decoration-none" href="https://docs.google.com/spreadsheets/d/1_9kcPJ9HHtJ3H-ItmZz0HXXI8UttTTS_/edit?usp=sharing&ouid=100664231100239761893&rtpof=true&sd=true">Google Sheets</a>.
+                </p>
+            </div>
         </div>
         {% include inc('hospital-name') %}
     </section>
-
     <div class="border-bottom mt-2"></div>
-    
     <section class="normal-font-size">
         <form action="{{ url_for('process_spreadsheet') }}" enctype="multipart/form-data" method="POST">
             <div class="my-4">
